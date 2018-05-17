@@ -1,0 +1,3 @@
+{% extends "!simple/index.html" %}
+{% block htmlscope %}{% if not (tag or category) %} itemscope itemtype="http://schema.org/Blog"{% endif %}{% endblock %}
+{% block content_title %}{% endblock %}

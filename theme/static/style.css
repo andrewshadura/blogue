@@ -1,0 +1,63 @@
+body{
+    padding-bottom: 30px;
+}
+
+header.jumbotron {
+    margin-bottom: 0;
+}
+
+header.jumbotron {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+h1,.h1 {
+    font-weight: bold;
+}
+
+h1 a,
+.entry-title a {
+    color: #333;
+}
+
+h1.page-header {
+    font-weight: normal;
+}
+
+h2,.h2 {
+    font-weight: bold;
+}
+
+#post-list > li {
+    list-style-type: none;
+}
+
+time.published::before {
+    content: "\e023 ";
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.post-info time {
+    color: grey;
+}
+
+.btn-tweet {
+    background-color: #1b95e0;
+    color: white;
+}
+
+.btn-share {
+    background-color: #4267b2;
+    color: white;
+}
+
+.btn-share:focus,
+.btn-share:focus,
+.btn-share:hover,
+.btn-tweet:hover {
+    filter: contrast(110%);
+    color: white;
+}

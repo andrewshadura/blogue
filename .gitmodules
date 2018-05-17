@@ -1,0 +1,3 @@
+[submodule "plugins/md-metayaml"]
+	path = plugins/md-metayaml
+	url = https://github.com/joachimneu/pelican-md-metayaml
