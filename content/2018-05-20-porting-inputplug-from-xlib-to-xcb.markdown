@@ -1,6 +1,7 @@
 ---
 title: Porting inputplug to XCB
-date: 2018-05-20 10:05
+date: 2018-05-20 21:50
+slug: porting-inputplug-from-xlib-to-xcb
 comments: true
 ---
 
