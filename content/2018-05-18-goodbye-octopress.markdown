@@ -2,6 +2,7 @@
 title: "Goodbye Octopress, hello Pelican"
 date: 2018-05-18 22:05
 slug: goodbye-octopress
+image: https://blog.shadura.me/images/posts/minidebconf-hamburg.jpg
 comments: true
 ---
 
