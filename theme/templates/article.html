@@ -4,13 +4,29 @@
 {% block head %}
 {{ super() }}
 {%- if article.image %}
-        <meta property="og:image" content="{{ article.image }}">
-        <meta name="twitter:image" content="{{ article.image }}">
+        <meta itemprop="image" property="og:image" content="{{ article.image }}">
         <meta name="twitter:card" content="summary_large_image">
 {% else %}
         <meta name="twitter:card" content="summary">
 {% endif %}
         <meta property="og:locale" content="{{ article.lang | replace('-', '_') }}">
+{% if article.translations %}{% for translation in article.translations %}
+        <meta property="og:locale:alternate" content="{{ translation.lang | replace('-', '_') }}">
+{% endfor %}{% endif %}
+{% if article.title %}
+        <meta itemprop="headline" property="og:title" content="{{ article.title }}" >
+{% endif %}
+{% if article.authors %}{% for author in article.authors %}
+        <meta itemprop="author" name="author" property="og:author" content="{{ author }}" >
+{% endfor %}{% endif %}
+{% if article.description or article.summary %}
+        <meta property="og:description" content="{{ article.description or (article.summary|striptags) }}" >
+{% endif %}
+{% if article.tags %}
+        <meta name="keywords" property="og:tags" content="{{ tag }}" >
+{% endif %}
+        <link rel="canonical" href="{{ SITEURL }}/{{ article.url }}">
+        <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" >
 {% endblock %}
 {% block opengraph_type %}
         <meta property="og:type" content="article">
