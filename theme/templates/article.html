@@ -1,6 +1,6 @@
 {% extends "!simple/article.html" %}
 {% block htmlscope %} itemscope itemtype="http://schema.org/BlogPosting"{% endblock %}
-{% block title %}{% if article.title %}{{ article.title }} &mdash; {% endif %}{{ SITENAME }}{% endblock %}
+{% block title %}{% if article.title %}{{ article.title | striptags }} &mdash; {% endif %}{{ SITENAME }}{% endblock %}
 {% block head %}
 {{ super() }}
 {%- if article.image %}
@@ -33,7 +33,7 @@
 {% endblock %}
 {% block content %}
 {{ super() }}
-<a href="https://twitter.com/intent/tweet?original_referer={{ SITEURL + '/' + article.url | urlencode }}&amp;ref_src=twsrc%5Etfw&text={{ title | urlencode }}&amp;tw_p=tweetbutton&amp;url={{ SITEURL + '/' + article.url | urlencode }}{% if TWITTER_USER %}&amp;via={{ TWITTER_USER }}{% endif %}" class="btn btn-xs btn-tweet" role="button">Tweet</a>
+<a href="https://twitter.com/intent/tweet?original_referer={{ SITEURL + '/' + article.url | urlencode }}&amp;ref_src=twsrc%5Etfw&text={{ title | striptags | urlencode }}&amp;tw_p=tweetbutton&amp;url={{ SITEURL + '/' + article.url | urlencode }}{% if TWITTER_USER %}&amp;via={{ TWITTER_USER }}{% endif %}" class="btn btn-xs btn-tweet" role="button">Tweet</a>
 <a href="https://www.facebook.com/sharer/sharer.php?u={{ SITEURL + '/' + article.url | urlencode }}&amp;display=popup&amp;ref=plugin&amp;src=like" class="btn btn-xs btn-share" role="button">Share</a>
 
 {% include "disqus.html" %}
