@@ -14,7 +14,7 @@
         <meta property="og:locale:alternate" content="{{ translation.lang | replace('-', '_') }}">
 {% endfor %}{% endif %}
 {% if article.title %}
-        <meta itemprop="headline" property="og:title" content="{{ article.title }}" >
+        <meta itemprop="headline" property="og:title" content="{{ article.title | striptags }}" >
 {% endif %}
 {% if article.authors %}{% for author in article.authors %}
         <meta itemprop="author" name="author" property="og:author" content="{{ author }}" >
