@@ -61,3 +61,15 @@ time.published::before {
     filter: contrast(110%);
     color: white;
 }
+
+figure,
+.figure {
+    padding-top: 1ex;
+    padding-bottom: 1ex;
+    display: block;
+}
+
+figcaption,
+.caption {
+    font-style: italic;
+}
