@@ -34,7 +34,7 @@ Another obvious idea was working for Red Hat, but knowing how slow their HR depa
 
 At some point, reading Debian Planet, I found `a blog post by Simon McVittie`_ on polkit, in which he mentioned Collabora. Soon, I applied, had my interviews and a job offer.
 
-*To be continued later today…*
+*To be continued later…*
 
 .. _Collabora: https://www.collabora.com/
 .. _`Kallithea project`: https://kallithea-scm.org/
