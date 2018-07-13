@@ -1,5 +1,5 @@
 ---
-title: Upcoming git-crecord releaae
+title: Upcoming git-crecord release
 date: 2018-07-13 13:10
 slug: upcoming-git-crecord-release
 comments: true
