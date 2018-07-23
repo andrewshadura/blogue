@@ -15,6 +15,6 @@ Third, long waited Python 3 support is here. I’m afraid at the moment I cannot
 
 Fourth, missing staging and unstaging functionality is being implemented, subject to the availability of free time during the holiday :)
 
-The project is currently hosted at GitHub: https://github.com/andrewshadura/git-crecord.
+The project is currently hosted at GitHub: [https://github.com/andrewshadura/git-crecord](https://github.com/andrewshadura/git-crecord).
 
 P.S. In case you’d like to support me hacking on git-crecord, or any other of my free software activities, you can tip my [Patreon account](https://www.patreon.com/andrewsh).
