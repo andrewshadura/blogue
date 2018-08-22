@@ -10,7 +10,10 @@ On Friday, I will be attending [LVEE](https://lvee.org/) (Linux Vacation Eastern
 
 Since the conference is not well known outside, well, a part of Eastern Europe, I decided I need to write a bit on it. According to the organisers, they had the idea of having a Linux conference after the newly reborn [Minsk Linux User Group](https://mlug.linux.by/) organised quite a successful celebration of the ten years anniversary of Debian, and they wanted to have even a bigger event. The first LVEE took place in 2005 in a middle of a forest near [Hrodna](https://en.wikipedia.org/wiki/Hrodna).
 
-![LVEE 2005](/images/posts/lvee2005.jpg)
+<figure>
+<img src="/images/posts/lvee2005.jpg">
+<figcaption>LVEE 2005 group photo</figcaption>
+</figure>
 
 As the name suggests, this conference is quite different from many other conferences, and it is actually a bit close in spirit to the [Linux Bier Wanderung](https://linuxbierwanderung.com/about.html). The conference is very informal, it happens basically in a middle of nowhere (until 2010, the Internet connection was very slow and unreliable or absent), and there’s a massive evening programme every evening with beer, [shashlyk](https://en.wikipedia.org/wiki/Shashlyk) and a lot of chatting.
 
