@@ -1,0 +1,38 @@
+---
+layout: post
+title: GNU indent 2.2.12
+date: 2018-09-03 13:24
+comments: true
+categories: gnu indent
+---
+
+As the maintainer of [GNU indent][1], I have just released [version 2.2.12][2] ([signature][3]), the first release GNU indent saw in eight years.
+
+Highlights include:
+
+* New options:
+    * `-pal` / `--pointer-align-left and `-par` / `--pointer-align-right`
+    * `-fnc` / `--fix-nested-comment`
+    * `-gts` / `--gettext-strings`
+    * `-slc` / `--single-line-conditionals`
+    * `-as` / `--align-with-spaces`
+    * `-ut` / `--use-tabs`
+    * `-nut` / `--no-tabs`
+    * `-sar` / `--spaces-around-initializers`
+    * `-ntac` / `--dont-tab-align-comments`
+* C99 and C11 keywords and `typeof` are now recognised.
+* `-linux` preset now includes `-nbs`.
+* `-kr` preset now includes `-par`.
+* Lots of bug fixes
+
+I’d like to thank all of the contributors of this release, most importantly:
+
+* [Tim Hentenaar](http://hentenaar.com/) for all of the fixes and refactoring he’s done in his branch
+* [Petr Písař](http://xpisar.wz.cz/), who maintains GNU indent in Red Hat and its derivatives, who’s submitted a lot of fixes and kept supporting users on the mailing list when I couldn’t
+* Santiago Vila, who maintains GNU indent in Debian
+* Daniel P. Valentine, who helped me a lot when I initially took over the maintenance of GNU indent
+* And [lots of others](https://hg.savannah.gnu.org/hgweb/indent/) who submitted their patches
+
+[1]: https://www.gnu.org/software/indent/ "GNU indent homepage"
+[2]: http://ftp.gnu.org/gnu/indent/indent-2.2.12.tar.xz "indent 2.2.12 tarball"
+[3]: http://ftp.gnu.org/gnu/indent/indent-2.2.12.tar.xz.sig "Detached PGP signature"
