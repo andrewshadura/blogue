@@ -35,5 +35,5 @@ I’d like to thank all of the contributors of this release, most importantly:
 * And [lots of others](https://hg.savannah.gnu.org/hgweb/indent/) who submitted their patches
 
 [1]: https://www.gnu.org/software/indent/ "GNU indent homepage"
-[2]: http://ftp.gnu.org/gnu/indent/indent-2.2.12.tar.xz "indent 2.2.12 tarball"
-[3]: http://ftp.gnu.org/gnu/indent/indent-2.2.12.tar.xz.sig "Detached PGP signature"
+[2]: https://ftp.gnu.org/gnu/indent/indent-2.2.12.tar.xz "indent 2.2.12 tarball"
+[3]: https://ftp.gnu.org/gnu/indent/indent-2.2.12.tar.xz.sig "Detached PGP signature"
