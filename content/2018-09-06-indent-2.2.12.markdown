@@ -4,6 +4,7 @@ title: GNU indent 2.2.12
 date: 2018-09-03 13:24
 comments: true
 categories: gnu indent
+slug: indent-2.2.12
 ---
 
 As the maintainer of [GNU indent][1], I have just released [version 2.2.12][2] ([signature][3]), the first release GNU indent saw in eight years.
