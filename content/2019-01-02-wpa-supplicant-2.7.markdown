@@ -3,7 +3,7 @@ layout: post
 title: wpa-supplicant and hostapd 2.7 in Debian
 date: 2019-01-02 13:29
 comments: true
-categories: wpa supplicant hostapd debian
+tags: WPA supplicant, hostapd, Debian
 slug: wpa-supplicant-2.7
 ---
 

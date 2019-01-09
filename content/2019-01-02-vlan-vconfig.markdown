@@ -3,7 +3,7 @@ layout: post
 title: Bye-bye binary vconfig(1)
 date: 2019-01-02 13:01
 comments: true
-categories: vlan vconfig debian
+tags: vlan, vconfig, Debian
 slug: vlan-vconfig
 ---
 

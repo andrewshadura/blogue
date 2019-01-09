@@ -3,7 +3,7 @@ layout: post
 title: GNU indent 2.2.12
 date: 2018-09-03 13:24
 comments: true
-categories: gnu indent
+tags: GNU indent
 slug: indent-2.2.12
 ---
 

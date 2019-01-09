@@ -3,7 +3,7 @@ layout: post
 title: "Support Software Freedom Conservancy"
 date: 2015-11-30 19:26
 comments: true
-tags: 
+tags: Conservancy, SFC
 ---
 
 The [Software Freedom Conservancy](https://sfconservancy.org/) are desperately looking for financial support after one of their corporate supporters have stopped their sponsorship. This week, there's an anonymous pledge to match donations from new supporters.

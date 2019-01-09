@@ -3,7 +3,7 @@ layout: post
 title: Linux Vacation Eastern Europe 2018
 date: 2018-08-22 13:24
 comments: true
-categories: conferences LVEE
+tags: conferences, LVEE
 ---
 
 On Friday, I will be attending [LVEE](https://lvee.org/) (Linux Vacation Eastern Europe) once again after a few years of missing it for various reasons. I will be presenting a talk on my experience of working with [LAVA](https://validation.linaro.org/); the talk is based on a talk given by my colleague [Guillaume Tucker](https://gtucker.io/), who helped me a lot when I was ramping up on LAVA.
