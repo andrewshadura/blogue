@@ -25,4 +25,4 @@ The author writes:
 > * librsvg doesn't really preprocess input files, rendering them as is
 > * librsvg has a minimal support of the edge-cases, which leads to rendering errors
 
-I’m thinking of packaging this for Debian, but I would be interested in knowing what others think of this.
+I’m thinking of packaging this for Debian, but I would be interested to know what others think of this.
