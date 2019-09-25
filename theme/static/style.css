@@ -44,16 +44,16 @@ time.published::before {
     color: grey;
 }
 
-.post-info category {
+.post-info .category {
     display: none;
 }
 
-.post-info tags {
+.post-info .tags {
     font-size: small;
     padding-bottom: 10px;
 }
 
-.post-info tags a {
+.post-info .tags a {
     background: #337ab7;
     color: white;
     padding: 2px;
