@@ -44,6 +44,22 @@ time.published::before {
     color: grey;
 }
 
+.post-info category {
+    display: none;
+}
+
+.post-info tags {
+    font-size: small;
+    padding-bottom: 10px;
+}
+
+.post-info tags a {
+    background: #337ab7;
+    color: white;
+    padding: 2px;
+    border-radius: 3px;
+}
+
 .btn-tweet {
     background-color: #1b95e0;
     color: white;
