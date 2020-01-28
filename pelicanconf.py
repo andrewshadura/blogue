@@ -12,6 +12,10 @@ THEME = 'theme'
 
 CSS_FILE = 'style.css'
 
+ADD_CSS_CLASSES = {
+    'table': ['table', 'table-striped']
+}
+
 TIMEZONE = 'Europe/Bratislava'
 
 DEFAULT_LANG = 'en'
@@ -40,7 +44,14 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['md-metayaml', 'liquid_tags.gist']
+PLUGINS = [
+        'md-metayaml',
+        'liquid_tags.figure',
+        'liquid_tags.gist',
+        'liquid_tags.img',
+        'add_css_classes',
+        'better_tables'
+]
 
 MENUITEMS = (('Blog', '/'),
              ('Archives', '/archives'),
