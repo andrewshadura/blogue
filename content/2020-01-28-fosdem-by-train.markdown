@@ -50,7 +50,7 @@ booked a day-time connection: Bratislava to Vienna to Frankfurt to Brussels.
 |      | Wien Hbf                       | 10:44   | 11:15     | ICE 26   |
 |      | Frankfurt am Main Hbf          | 17:36   | 18:29     | ICE 10   |
 |      | Bruxelles-Nord / Brussel Noord | 21:26   | 21:37     | IC 3321  |
-|      | Vilvoorde                      | 21:45   | 21:46     |          |
+|      | Vilvoorde                      | 21:45   |           |          |
 
 | Date | Station               | Arrival | Departure | Train  |
 | ---- | --------------------- | ------- | --------- | ------ |
