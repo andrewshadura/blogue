@@ -107,7 +107,7 @@ I rarely use the command-line gdb for anything else than printing backtraces, so
 
 * `break -func create_sig_file`: set breakpoint at a function
 * `finish`: ‘step out’, run to the end of the current function and stop right after it returns
-* `x/10xb pointer`: print **10** **b**ytes he**x**adecimal
+* `x/10xb pointer`: print **10** he**x**adecimal **b**ytes
 
 This is what I have figured during my debugging session: the data gets corrupted at the end of the signing sequence, inside or before the `cms_to_buf` function invocation, which gets the signature data copied from the internal OpenSSL data structure into the output buffer:
 
