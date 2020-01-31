@@ -40,7 +40,7 @@ Bad move.
 
 Next day, the colleague comes back to me with this:
 
-> I did a test builds in Apertis SDK, Debian buster, Fedora 31, ALT Linux 9 -- only the latter environment produced the `cst` tool which generated correct signature for the file.
+> I did test builds in Apertis SDK, Debian buster, Fedora 31, ALT Linux 9 -- only the latter environment produced the `cst` tool which generated correct signature for the file.
 > 
 > The rest produce a bit different signature with zeroes for the current kernel:
 > 
