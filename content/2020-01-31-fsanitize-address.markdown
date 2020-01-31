@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using gcc sanitisers to get a nasty bug fixed
-date: 2020-01-31 10:18:00 CET
+date: 2020-01-31 12:35:45 CET
 comments: true
 tags: valgrind, address sanitiser, gcc, linter, Apertis, Debian
 slug: fsanitize-address
