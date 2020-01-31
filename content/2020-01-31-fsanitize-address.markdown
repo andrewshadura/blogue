@@ -197,6 +197,6 @@ ret_val = gen_sig_data(file, cert_file, hash, sig_fmt,
 
 Of course, `size_t` is 32-bit on 32-bit systems, but *significantly* wider on 64-bit ones, so no surprise this code would overwrite something else on the stack, in this case the signature data.
 
-One of the lessons I learnt from this way: never underestimate the compiler’s built-in tools, namely the sanitisers.
+One of the lessons I learnt from this way: never underestimate the compiler’s built-in tools. At least, not the sanitisers!
 
 Oh, just in case you want to see more: the patches currently live at the [Apertis GitLab](https://gitlab.apertis.org/pkg/development/imx-code-signing-tool/merge_requests/2/).
