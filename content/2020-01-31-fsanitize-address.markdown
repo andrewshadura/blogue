@@ -9,7 +9,7 @@ slug: fsanitize-address
 
 A couple of days ago a colleague at [Collabora](https://www.collabora.com/) asked me to help create a Debian package for the tool he needed to complete his task. The tool happened to be an NXP code signing tool, used to sign OS images to be run on i.MX systems using ‘*High Assurance Boot*’.
 
-As it often happens, the tool was distributed in a manner typical for corporations like NXP: no direct link to the tarball, custom buildsystem, compiled binaries in the same tarball as the sources. A big relief was that the tool has been distributed under a three-clause BSD license since version 3.3.0 (the sources were not provided at all before that).
+As it often happens, the tool was distributed in a manner typical for many big corporations: no direct link to the tarball, custom buildsystem, compiled binaries in the same tarball as the sources. A big relief was that the tool has been distributed under a three-clause BSD license since version 3.3.0 (the sources were not provided at all before that).
 
 The custom buildsystem meant it was not using the Debian build flags (`CFLAGS := …`, `CC := gcc`), so I had to plug a custom ‘toolchain’ Makefile into the right place with definitions relevant to Debian:
 
