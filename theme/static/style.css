@@ -89,3 +89,9 @@ figcaption,
 .caption {
     font-style: italic;
 }
+
+@media (min-width: 1000px) {
+    img.img-responsive {
+        max-width: 880px;
+    }
+}
