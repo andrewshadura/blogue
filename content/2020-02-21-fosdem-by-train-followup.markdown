@@ -10,7 +10,7 @@ tags: FOSDEM, Brussels, train journeys, flygskam
 Here’s a recap of my train journey based on the [Twitter thread](https://threadreaderapp.com/thread/1222802145268899842.html)
 I kept posting as I travelled.
 
-### To FOSDEM…
+## To FOSDEM…
 
 The departure from Bratislava was [as planned](https://twitter.com/andrew_shadura/status/1222802145268899842):
 {% figure img-responsive /images/posts/2020-02/departure-bratislava-hl-st.jpg Ready to depart from Bratislava hl. st. %}
@@ -34,7 +34,7 @@ Fun fact: Aachen is called Cáchy in Czech, apparently as a corruption of an old
 Having met some Debian people on the train, I have finally arrived in Brussels, albeit with some delay. This, unfortunately meant that I haven’t gone to Vilvoorde to see a friend, so the regional tickets I bought online were useless.
 {% figure img-responsive /images/posts/2020-02/finally-bxl.jpg "Finally, Brussels!" "Platform at Bruxelles-Midi" %}
 
-### … and back!
+## … and back!
 
 The trip home was much better in terms of missed trains, only if a tiny bit more tiring since I took it in one day.
 {% figure img-responsive /images/posts/2020-02/leaving-bxl.jpg "Leaving Brussels on time" "Platform at Bruxelles-Midi with an ICE almost ready to be boarded" %}
