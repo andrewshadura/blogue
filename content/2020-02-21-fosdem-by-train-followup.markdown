@@ -19,7 +19,7 @@ Half an hour in Vienna was just enough for me to grab some coffee and breakfast 
 {% figure img-responsive /images/posts/2020-02/boarding-ice-to-frankfurt.jpg Boarding a Deutsche Bahn ICE to Frankfurt am Main %}
 
 Unfortunately, soon after we left Linz and headed to Passau, the train broke down. Apparently, it powered down and the driver was struggling to reboot it. After more than an hour at Haiding, we finally departed with a huge delay:
-{% figure img-responsive /images/posts/2020-02/trapped-in-haiding.jpg "Trapped in Haiding near Linz" "ICE standing at a platform of a railway station at Haiding %}
+{% figure img-responsive /images/posts/2020-02/trapped-in-haiding.jpg "Trapped in Haiding near Linz" "ICE standing at a platform of a railway station at Haiding" %}
 
 Since the 18:29 train to Brussels I needed to catch in Frankfurt was the last one that day, I was put into a hotel Leonardo across the street from Frankfurt Hbf, paid by Deutsche Bahn, of course. By the time of our arrival in Frankfurt, the delay was 88 minutes.
 {% figure img-responsive /images/posts/2020-02/hotel-in-frankfurt.jpg Hotel room in Frankfurt am Main %}
