@@ -200,3 +200,5 @@ Of course, `size_t` is 32-bit on 32-bit systems, but *significantly* wider on 64
 One of the lessons I learnt from this way: never underestimate the compiler’s built-in tools. At least, not the sanitisers!
 
 Oh, just in case you want to see more: the patches currently live at the [Apertis GitLab](https://gitlab.apertis.org/pkg/development/imx-code-signing-tool/merge_requests/2/).
+
+**2020-02-18 Update**: This post has also been published at Collabora’s website: <https://www.collabora.com/news-and-blog/blog/2020/02/18/using-gcc-sanitisers-to-get-a-nasty-bug-fixed>
