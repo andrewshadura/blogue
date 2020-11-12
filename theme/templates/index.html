@@ -1,3 +1,6 @@
 {% extends "!simple/index.html" %}
 {% block htmlscope %}{% if not (tag or category) %} itemscope itemtype="http://schema.org/Blog"{% endif %}{% endblock %}
 {% block content_title %}{% endblock %}
+{% block extra_meta %}
+        <link rel="prefetch" as="document" href="{{ SITEURL }}/{{ articles_page.object_list[0].url }}">
+{% endblock %}

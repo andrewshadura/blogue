@@ -7,14 +7,9 @@ tags: SVG, Debian
 slug: resvg
 ---
 
-Yesterday I have discovered [resvg](https://github.com/RazrFalcon/resvg), an MPL 2.0-licensed SVG rendering and optimisation library and a tool, written in Rust. It is said to be faster than some SVG renderers while currently slower than librsvg:
+Yesterday I have discovered [resvg](https://github.com/RazrFalcon/resvg), an MPL 2.0-licensed SVG rendering and optimisation library and a tool, written in Rust. It is said to be faster than some SVG renderers while currently slower than librsvg. It aims to support the static subset of SVG [better](https://razrfalcon.github.io/resvg-test-suite/svg-support-table.html) than other libraries:
 
-![Speed comparison for the Elementary Icon Theme with resvg/cairo being faster than QtSvg but slower than librsvg and resvg/qt being slower than QtSvg](https://github.com/RazrFalcon/resvg/raw/master/.github/perf-elementary.svg?sanitize=true)
-![Speed comparison for the Oxygen Icon Theme with resvg/cairo being faster than QtSvg but slower than librsvg and resvg/qt being slower than QtSvg](https://github.com/RazrFalcon/resvg/raw/master/.github/perf-oxygen.svg?sanitize=true)
-
-It aims to support the static subset of SVG [better](https://razrfalcon.github.io/resvg-test-suite/svg-support-table.html) than other libraries:
-
-![SVG test suite results: resvg 249, Inkscape 253, librsvg 222](https://github.com/RazrFalcon/resvg/raw/master/.github/official_chart.svg?sanitize=true)
+![SVG test suite results: resvg 1272, Inkscape 967, librsvg 998](https://raw.githubusercontent.com/RazrFalcon/resvg/master/.github/chart.svg?sanitize=true)
 
 The author writes:
 
