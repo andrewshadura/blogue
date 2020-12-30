@@ -49,9 +49,12 @@ PLUGINS = [
         'liquid_tags.figure',
         'liquid_tags.gist',
         'liquid_tags.img',
+        'summary',
         'add_css_classes',
         'better_tables'
 ]
+
+SUMMARY_END_MARKER = "<!-- more -->"
 
 MENUITEMS = (('Blog', '/'),
              ('Archives', '/archives'),
