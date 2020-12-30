@@ -51,6 +51,7 @@ I wanted to keep the delta to the future Debian package at a bare minimum, so I 
 
 To generate the vendor tarball, I added this to the rules file:
 
+    :::make
     include /usr/share/dpkg/pkg-info.mk
     
     vendor:
@@ -65,6 +66,7 @@ This target, being run manually and not as part of the build process, download t
 
 Now, to make `dh-cargo` use the vendored code, we need to link it into the right place. `dh-cargo` creates a Cargo registry tree in a subdirectly under `debian/` where it symlinks crates from the Rust development packages. This extra code makes sure the vendored dependencies are available there too:
 
+    :::make
     override_dh_auto_configure:
             dh_auto_configure $@
             for d in vendor/* ; \
