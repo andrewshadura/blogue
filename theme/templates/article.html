@@ -1,10 +1,15 @@
-{% extends "!simple/article.html" %}
+{% extends "base.html" %}
 {% block htmlscope %} itemscope itemtype="http://schema.org/BlogPosting" class="h-entry"{% endblock %}
 {% block title %}{% if article.title %}{{ article.title | striptags }} &mdash; {% endif %}{{ SITENAME }}{% endblock %}
 {% block head %}
 {{ super() }}
+
+{% import 'translations.html' as translations with context %}
+{% if translations.entry_hreflang(article) %}
+        {{ translations.entry_hreflang(article) }}
+{% endif %}
 {%- if article.image %}
-        <meta itemprop="image" property="og:image" content="{{ article.image }}">
+        <meta itemprop="image" property="og:image" class="u-photo" content="{{ article.image }}">
         <meta name="twitter:card" content="summary_large_image">
 {% else %}
         <meta name="twitter:card" content="summary">
@@ -19,6 +24,9 @@
 {% if article.authors %}{% for author in article.authors %}
         <meta itemprop="author" name="author" property="og:author" content="{{ author }}" >
 {% endfor %}{% endif %}
+{% if article.description %}
+        <meta name="description" content="{{article.description}}" />
+{% endif %}
 {% if article.description or article.summary %}
         <meta property="og:description" content="{{ article.description or (article.summary|striptags) }}" >
 {% endif %}
@@ -34,9 +42,53 @@
         <meta property="og:type" content="article">
 {% endblock %}
 {% block content %}
-{{ super() }}
-<a href="https://twitter.com/intent/tweet?original_referer={{ SITEURL + '/' + article.url | urlencode }}&amp;ref_src=twsrc%5Etfw&text={{ title | striptags | urlencode }}&amp;tw_p=tweetbutton&amp;url={{ SITEURL + '/' + article.url | urlencode }}{% if TWITTER_USER %}&amp;via={{ TWITTER_USER }}{% endif %}" class="btn btn-xs btn-tweet" role="button">Tweet</a>
-<a href="https://www.facebook.com/sharer/sharer.php?u={{ SITEURL + '/' + article.url | urlencode }}&amp;display=popup&amp;ref=plugin&amp;src=like" class="btn btn-xs btn-share" role="button">Share</a>
+<article id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" class="p-name"
+         title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+ {% import 'translations.html' as translations with context %}
+ {{ translations.translations_for(article) }}
+    <time class="published dt-published" title="Published on {{ article.locale_date }}" datetime="{{ article.date.isoformat() }}">
+      {{ article.locale_date }}
+    </time>
+    {% if article.modified %}
+    <time class="modified dt-updated" title="Amended on {{ article.locale_modified }}" datetime="{{ article.modified.isoformat() }}">
+      {{ article.locale_modified }}
+    </time>
+    {% endif %}
+    {% if article.authors %}
+    <address class="h-card vcard author">
+      By {% for author in article.authors %}
+          <a class="p-name u-url url fn" href="https://shadura.me/">{{ author }}</a>
+        {% endfor %}
+    </address>
+    {% endif %}
+  </header>
+  <div class="entry-content e-content">
+    {{ article.content }}
+  </div><!-- /.entry-content -->
+  <footer class="post-info">
+    {% if article.category %}
+    <div class="category">
+        Category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+    </div>
+    {% endif %}
+    {% if article.tags %}
+    <div class="tags">
+        Tags:
+        {% for tag in article.tags %}
+            <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <div class="share">
+        Share:
+        <a href="https://twitter.com/intent/tweet?original_referer={{ SITEURL + '/' + article.url | urlencode }}&amp;ref_src=twsrc%5Etfw&amp;text={{ title | striptags | urlencode }}&amp;tw_p=tweetbutton&amp;url={{ SITEURL + '/' + article.url | urlencode }}{% if TWITTER_USER %}&amp;via={{ TWITTER_USER }}{% endif %}" class="btn btn-xs btn-tweet" role="button">Twitter</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ SITEURL + '/' + article.url | urlencode }}&amp;display=popup&amp;ref=plugin&amp;src=like" class="btn btn-xs btn-share" role="button">Facebook</a>
+    </div>
+  </footer><!-- /.post-info -->
+</article>
 
 {% include "disqus.html" %}
 {% endblock %}
