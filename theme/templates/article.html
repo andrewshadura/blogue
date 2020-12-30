@@ -1,5 +1,5 @@
 {% extends "!simple/article.html" %}
-{% block htmlscope %} itemscope itemtype="http://schema.org/BlogPosting"{% endblock %}
+{% block htmlscope %} itemscope itemtype="http://schema.org/BlogPosting" class="h-entry"{% endblock %}
 {% block title %}{% if article.title %}{{ article.title | striptags }} &mdash; {% endif %}{{ SITENAME }}{% endblock %}
 {% block head %}
 {{ super() }}
@@ -27,6 +27,8 @@
 {% endif %}
         <link rel="canonical" href="{{ SITEURL }}/{{ article.url }}">
         <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" >
+        <link rel="webmention" href="https://webmention.io/shadura.me/webmention" />
+        <link rel="pingback" href="https://webmention.io/shadura.me/xmlrpc" />
 {% endblock %}
 {% block opengraph_type %}
         <meta property="og:type" content="article">

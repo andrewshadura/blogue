@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}"{% block htmlscope %}{% endblock %}>
 <head>
-        {% block head %}
+{% block head %}
         <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,25 +36,26 @@
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
         <link rel="stylesheet" href="/theme/style.css">
         <link rel="stylesheet" href="/theme/tango.css">
+        <link rel="author" href="https://shadura.me/">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        {% block extra_meta %}
-        {% endblock extra_meta %}
-        {% block opengraph_type %}
+{% block extra_meta %}
+{% endblock extra_meta %}
+{% block opengraph_type %}
         <meta property="og:type" content="website">
-        {% endblock %}
-        {% if TWITTER_USER %}
+{% endblock %}
+{% if TWITTER_USER %}
         <meta name="twitter:site" content="@{{ TWITTER_USER }}">
-        {% endif %}
-        {% if FACEBOOK_ID %}
+{% endif %}
+{% if FACEBOOK_ID %}
         <meta property="fb:admins" content="{{ FACEBOOK_ID }}">
-        {% endif %}
-        {% endblock head %}
+{% endif %}
+{% endblock head %}
 </head>
 
 <body id="index" class="home" role="document">
         <header id="banner" class="jumbotron" role="banner"><hgroup>
-                <h1><a href="{{ SITEURL }}/">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a></h1>
+                <h1><a href="{{ SITEURL }}/" class="p-name u-url">{{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong></a></h1>
         </hgroup></header><!-- /#banner -->
         <nav id="menu" class="navbar navbar-default container-fluid"><ul class="nav navbar-nav main-navigation">
         {% for title, link in MENUITEMS %}
