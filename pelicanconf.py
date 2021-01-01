@@ -51,10 +51,15 @@ PLUGINS = [
         'liquid_tags.img',
         'summary',
         'add_css_classes',
-        'better_tables'
+        'better_tables',
+        'shortcodes',
 ]
 
 SUMMARY_END_MARKER = "<!-- more -->"
+
+SHORTCODES = {
+    'mention': '<span class="h-card"><a href="{{url}}" class="u-url mention">{{name}}</a></span>'
+}
 
 MENUITEMS = (('Blog', '/'),
              ('Archives', '/archives'),
