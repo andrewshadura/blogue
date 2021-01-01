@@ -23,6 +23,7 @@ DEFAULT_LANG = 'en'
 ARCHIVES_URL = 'archives'
 ARCHIVES_SAVE_AS = 'archives/index.html'
 
+AUTHOR_FULL_URL = 'https://shadura.me/'
 AUTHOR_URL = 'author/{slug}'
 AUTHOR_SAVE_AS = 'author/{slug}/index.html'
 
@@ -53,6 +54,7 @@ PLUGINS = [
         'add_css_classes',
         'better_tables',
         'shortcodes',
+        'activitystreams-feed-filter',
 ]
 
 SUMMARY_END_MARKER = "<!-- more -->"
