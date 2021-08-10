@@ -12,7 +12,7 @@ I kept posting as I travelled.
 
 ## To FOSDEM…
 
-The departure from Bratislava was [as planned](https://twitter.com/andrew_shadura/status/1222802145268899842):
+The departure from Bratislava was [as planned](/2020/01/28/fosdem-by-train/):
 {% figure img-responsive /images/posts/2020-02/departure-bratislava-hl-st.jpg Ready to depart from Bratislava hl. st. %}
 
 Half an hour in Vienna was just enough for me to grab some coffee and breakfast and board the train to Frankfurt without a hurry:
