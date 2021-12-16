@@ -55,9 +55,14 @@ PLUGINS = [
         'better_tables',
         'shortcodes',
         'activitystreams-feed-filter',
+        'read_more',
 ]
 
 SUMMARY_END_MARKER = "<!-- more -->"
+
+READ_MORE_LINK = 'Read more'
+
+READ_MORE_LINK_FORMAT = '<footer><a rel="full-article" class="read-more btn btn-primary" href="/{url}">{text} <span class="glyphicon glyphicon-chevron-right"></span></a></footer>'
 
 SHORTCODES = {
     'mention': '<span class="h-card"><a href="{{url}}" class="u-url mention">{{name}}</a></span>'
