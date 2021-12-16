@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Follow-up on the train journey to FOSDEM
-date: 2020-02-21 15:09:28 FET
+date: 2020-02-21 15:09:28 CET
 comments: true
 slug: fosdem-by-train-followup
 tags: FOSDEM, Brussels, train journeys, flygskam
