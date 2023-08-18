@@ -56,7 +56,16 @@ PLUGINS = [
         'shortcodes',
         'activitystreams-feed-filter',
         'read_more',
+        'thumbnailer',
 ]
+
+IMAGE_PATH = 'images'
+THUMBNAIL_DIR = 'images/thumbnails'
+THUMBNAIL_SIZES = {
+    "thumbnail_square": "600",
+    "thumbnail_wide": "600x?",
+    "thumbnail_tall": "?x600",
+}
 
 SUMMARY_END_MARKER = "<!-- more -->"
 

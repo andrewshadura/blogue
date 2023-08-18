@@ -70,10 +70,12 @@ Loader.add_constructor(u'tag:yaml.org,2002:str', construct_yaml_str)
 class MetaYamlExtension(Extension):
     """Extension for parsing YAML-Metadata with Python-Markdown."""
 
-    def extendMarkdown(self, md, md_globals):
+    def extendMarkdown(self, md, md_globals=None):
         """Add MetaYamlPreprocessor to Markdown instance."""
 
-        md.preprocessors.add("meta_yaml", MetaYamlPreprocessor(md), "<meta")
+        i = md.preprocessors.get_index_for_name("meta")
+        priority = md.preprocessors._priority[i].priority + 5
+        md.preprocessors.register(MetaYamlPreprocessor(md), "meta_yaml", priority)
 
 
 

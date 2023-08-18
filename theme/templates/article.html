@@ -53,7 +53,8 @@
       {{ article.locale_date }}
     </time>
     {% if article.modified %}
-    <time class="modified dt-updated" title="Amended on {{ article.locale_modified }}" datetime="{{ article.modified.isoformat() }}">
+    ·
+    Amended on <time class="modified dt-updated" title="Amended on {{ article.locale_modified }}" datetime="{{ article.modified.isoformat() }}">
       {{ article.locale_modified }}
     </time>
     {% endif %}

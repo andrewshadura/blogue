@@ -68,7 +68,7 @@ get with the old De’Longhi grinder. There is one downside to the new grinder.
 
 Happy with my new purchase, I went to read this review and thought to myself: ‘lucky me, my grinder is absolutely quiet!’ And then I realised that
 the noise in my kitchen is not, in fact, produced by the fridge, but the grinder. Well, a cheap switched plug solved the issue completely (I wish
-sockets here each had a switch like they usually to in the UK!)
+sockets here each had a switch like they usually do in the UK!)
 
 ![Switched plug](/images/posts/2021-12/switched-plug.jpg)
 
