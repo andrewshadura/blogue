@@ -1,0 +1,7 @@
+# Output formats configuration
+home:
+  - HTML
+  - Atom
+
+section:
+  - HTML

@@ -1,0 +1,17 @@
+{{ define "content" }}
+<section id="content">
+<h1 class="page-header">Archives</h1>
+
+<ol id="post-list">
+{{ range where .Site.RegularPages "Type" "posts" }}
+    <li><article class="hentry">
+        <header>
+            <h2 class="entry-title"><a href="{{ .Permalink }}" rel="bookmark" title="Permalink to {{ .Title | plainify }}">{{ .Title }}</a></h2>
+            <time class="published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}"> {{ .Date.Format "2 January 2006" }} </time>
+        </header>
+    </article></li>
+{{ end }}
+</ol><!-- /#posts-list -->
+
+</section><!-- /#content -->
+{{ end }}

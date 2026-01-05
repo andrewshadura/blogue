@@ -1,0 +1,35 @@
+baseURL: https://blog.shadura.me
+languageCode: en
+title: Andrej's notes
+theme: blog.shadura.me
+timezone: Europe/Bratislava
+
+# Pagination
+pagination:
+  pagerSize: 10
+
+# Permalinks - date-based structure
+permalinks:
+  posts: /:year/:month/:day/:slug/
+
+# Taxonomies
+taxonomies:
+  category: categories
+  tag: tags
+
+# Summary configuration
+summaryLength: 70
+
+# Build settings
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+# Enable emoji support
+enableEmoji: true
+
+# Enable git info for lastmod fallback
+enableGitInfo: true
+
+# Disable taxonomy pages we don't need
+disableKinds: []

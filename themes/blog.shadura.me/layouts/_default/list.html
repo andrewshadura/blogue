@@ -1,0 +1,23 @@
+{{ define "content" }}
+<section id="content">
+<h1 class="page-header">{{ .Title }}</h1>
+
+<ol id="post-list">
+{{ range .Pages }}
+    <li><article class="hentry">
+        <header>
+            <h2 class="entry-title"><a href="{{ .Permalink }}" rel="bookmark" title="Permalink to {{ .Title | plainify }}">{{ .Title }}</a></h2>
+            <time class="published" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}"> {{ .Date.Format "2 January 2006" }} </time>
+            <address class="vcard author">By
+                <a class="url fn" href="{{ $.Site.Params.author_full_url }}">{{ $.Site.Params.author.name }}</a>
+            </address>
+        </header>
+        <div class="entry-content"> {{ .Summary }} </div><!-- /.entry-content -->
+    </article></li>
+{{ end }}
+</ol><!-- /#posts-list -->
+
+{{ template "_internal/pagination.html" . }}
+
+</section><!-- /#content -->
+{{ end }}

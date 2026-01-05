@@ -1,0 +1,28 @@
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{ with .OutputFormats.Get "atom" -}}
+    <link href="{{ .Permalink }}" type="application/atom+xml" rel="alternate" title="{{ $.Site.Title }} Full Atom Feed" />
+    {{- end }}
+
+    <link rel="stylesheet" href="/theme/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="/theme/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/theme/style.css">
+    <link rel="stylesheet" href="/theme/tango.css">
+    <link rel="author" href="{{ $.Site.Params.Author.url }}">
+    <script src="/theme/js/jquery.min.js"></script>
+    <script src="/theme/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+{{ block "extra_meta" . }}{{ end }}
+{{ block "opengraph_type" . }}
+    <meta property="og:type" content="website">
+{{ end }}
+{{ with .Site.Params.twitter_user }}
+    <meta name="twitter:site" content="@{{ . }}">
+{{ end }}
+{{ with .Site.Params.facebook_id }}
+    <meta property="fb:admins" content="{{ . }}">
+{{ end }}

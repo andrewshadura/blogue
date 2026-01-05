@@ -1,0 +1,15 @@
+# Site parameters for templates
+author:
+  name: Andrej Shadura
+  url: https://shadura.me/
+author_full_url: https://shadura.me/
+twitter_user: andrew_shadura
+facebook_id: '100000762850662'
+disqus_sitename: andrewsh
+
+# Thumbnail sizes for image processing
+thumbnails:
+  square: "600x600"
+  wide: "600x"
+  tall: "x600"
+  default: "600x"  # Used in shortcodes

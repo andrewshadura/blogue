@@ -1,0 +1,24 @@
+---
+layout: post
+title: "resvg: worth having in Debian?"
+date: 2019-01-09T11:05:00
+lastmod: 2019-01-09T11:05:00
+comments: true
+tags: ["SVG", "Debian"]
+slug: resvg
+---
+
+Yesterday I have discovered [resvg](https://github.com/RazrFalcon/resvg), an MPL 2.0-licensed SVG rendering and optimisation library and a tool, written in Rust. It is said to be faster than some SVG renderers while currently slower than librsvg. It aims to support the static subset of SVG [better](https://razrfalcon.github.io/resvg-test-suite/svg-support-table.html) than other libraries:
+
+![SVG test suite results: resvg 1272, Inkscape 967, librsvg 998](https://raw.githubusercontent.com/RazrFalcon/resvg/master/.github/chart.svg?sanitize=true)
+
+The author writes:
+
+> One of the major differences from other rendering libraries is that resvg does a lot of preprocessing before rendering. It converts shapes to paths, resolves attributes, removes groups and invisible elements, fixes a lot of issues in malformed SVG files. Then it creates a simple render tree with all elements and attributes resolved. And only then it starts to render. So it's very easy to implement a new rendering backend.
+
+> * librsvg, currently, is heavily tied to the cairo library, unlike resvg
+> * librsvg is heavily tied to GNOME which makes it painful to distribute outside the Linux ecosystem
+> * librsvg doesn't really preprocess input files, rendering them as is
+> * librsvg has a minimal support of the edge-cases, which leads to rendering errors
+
+I’m thinking of packaging this for Debian, but I would be interested to know what others think of this.

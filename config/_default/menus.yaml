@@ -1,0 +1,16 @@
+main:
+  - name: Blog
+    url: /
+    weight: 1
+#  - name: Archives
+#    url: /archives
+#    weight: 2
+#  - name: Photos
+#    url: http://photos.shadura.me
+#    weight: 3
+  - name: Panoramas
+    url: https://pano.shadura.me
+    weight: 4
+  - name: About me
+    url: https://shadura.me
+    weight: 5

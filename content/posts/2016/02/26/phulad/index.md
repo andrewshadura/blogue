@@ -1,0 +1,24 @@
+---
+layout: post
+title: Phulud? No, Phulad.
+date: 2016-02-26T17:45:00
+lastmod: 2016-02-26T17:45:00
+comments: true
+slug: phulad
+tags: ["India"]
+---
+
+If you bought an North India travel guide by Vanessa Betts and Victoria
+McCulloch, and tried to figure out where is ‘Phulud’ and how to get there
+from Deogarh (and how to get to Deogarh itself from Udaipur), don’t waste your
+time googling, as **it’s not Phulud, but [Phulad](https://en.wikipedia.org/wiki/Phulad).**
+
+It does seem that the narrow gauge journey from Deogarh to Phulad is indeed beautiful:
+
+<iframe frameborder="0" width="853" height="480" src="https://www.youtube.com/embed/_BXKMRxieGA" allowfullscreen></iframe>
+
+Meanwhile, I have also found this very interesting post by Mary Anne Erickson: [Impressions of India: Udaipur to Deogarh](http://www.huffingtonpost.com/mary-anne-erickson/impressions-of-india-udai_b_6827462.html). I’m not yet sure we’re going to follow that route, but it seems promising.
+
+P.S. Despite what the guide said about the airport in Jaisalmer, which is *due to open in 2013*, according to the reports, it is [still](https://en.wikipedia.org/wiki/Jaisalmer_Airport) [not open](http://www.businessinsider.com/take-a-look-inside-indias-brand-new-ghost-airport-2015-8), so we have to skip that city. Oh well.
+
+**EDIT**: The guide actually also says, on page 10: *Fly from Jaisalmer back to Delhi to connect with your flight home.* Fact checking? No, who needs that? :)

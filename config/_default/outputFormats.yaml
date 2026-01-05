@@ -1,0 +1,7 @@
+Atom:
+  name: Atom
+  mediaType: application/atom+xml
+  baseName: atom
+  isPlainText: false
+  rel: alternate
+  isHTML: false

@@ -1,0 +1,21 @@
+{{- $class := .Get "class" | default (.Get 0) -}}
+{{- $src := .Get "src" | default (.Get 1) -}}
+{{- $title := .Get "title" | default (.Get 2) -}}
+{{- $alt := .Get "alt" | default (.Get 3) | default $title -}}
+
+{{- $image := "" -}}
+{{- $processedSrc := "" -}}
+
+{{- /* Try to find image as page resource first */ -}}
+{{- with $.Page.Resources.GetMatch $src -}}
+  {{- $image = . -}}
+  {{- /* Generate thumbnail using configured size with quality and Lanczos filter */ -}}
+  {{- $thumbSize := $.Site.Params.thumbnails.default | default "600x" -}}
+  {{- $thumb := $image.Resize (printf "%s q83 Lanczos" $thumbSize) -}}
+  {{- $processedSrc = $thumb.RelPermalink -}}
+{{- else -}}
+  {{- /* Fallback to original path if not a page resource */ -}}
+  {{- $processedSrc = $src -}}
+{{- end -}}
+
+<img alt="{{ $alt }}" class="{{ $class }}" src="{{ $processedSrc }}"{{ with $title }} title="{{ . }}"{{ end }}/>

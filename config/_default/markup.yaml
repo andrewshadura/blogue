@@ -1,0 +1,16 @@
+goldmark:
+  renderer:
+    unsafe: true  # Allow raw HTML in markdown
+  parser:
+    attribute:
+      block: true  # Enable attribute blocks
+      title: true
+
+highlight:
+  style: tango
+  lineNos: false
+  noClasses: false
+
+tableOfContents:
+  startLevel: 2
+  endLevel: 3

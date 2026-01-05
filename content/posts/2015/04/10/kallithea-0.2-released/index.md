@@ -1,0 +1,175 @@
+---
+layout: post
+title: "Kallithea 0.2 released"
+date: 2015-04-10T22:48:00
+lastmod: 2015-04-10T22:48:00
+comments: true
+slug: kallithea-0.2-released
+tags: []
+---
+
+<small>This post is almost a carbon copy of the Kallithea 0.2 release notes.</small>
+
+[Kallithea project](https://kallithea-scm.org/) have just released Kallithea 0.2. Kallithea is a Python-based GPLv3 source
+code management software for web-based hosting of Mercurial and Git repositories.
+
+This release brings many changes since 0.1. Notably, pull requests system
+have been improved, making contributing changes more robust. The visual
+appearance has also been refined: modern font-based symbolic icons from
+FontAwesome and GitHub Octicons have replaced the previously used bitmap
+icons, and revision graphs are now drawn with HiDPI display support.
+Kallithea now supports Mercurial 3.3 and Dulwich 0.9.9. Several fixes in
+the database code boosted performance significantly.
+
+We have also updated our Javascript libraries: jQuery, CodeMirror and Mergely.
+Javascript and CSS code have been cleaned up, with less and less code depending
+on Yahoo UI library.
+
+Since 0.1 we have discovered two security issues, so all users are strongly
+recommended to upgrade. For more details on these issues, please see our
+[Security Notices page](https://kallithea-scm.org/security/)
+
+For more information, see [https://kallithea-scm.org/](https://kallithea-scm.org/) or 
+[http://docs.kallithea-scm.org/](http://docs.kallithea-scm.org/).
+<!-- more -->
+
+The summary of the changes since 0.1 release is below.
+
+Bug fixes:
+
+ * forms: add CSRF protection to all forms — [CVE-2015-0276](https://kallithea-scm.org/security/cve-2015-0276.html)
+ * api: don't send internal data unless asked for it — [CVE-2015-0260](https://kallithea-scm.org/security/cve-2015-0260.html)
+ * middleware: fix ``force_tls`` typo in ``force_https`` backward compatibility code (Issue [#44](https://bitbucket.org/conservancy/kallithea/issue/44))
+ * rebranddb: update user ``extern_type`` and ``_name`` to ‘``internal``’ instead of ‘``kallithea``’ (Issue [#38](https://bitbucket.org/conservancy/kallithea/issue/38))
+ * git: do not fail if git is not installed and has been removed from ``__init__.py`` backends
+ * git: fix ``'name' must be bytestring, not unicode`` error on browsing changesets
+ * git: close SubprocessIOChunker inputstream used for git (Issue [#32](https://bitbucket.org/conservancy/kallithea/issue/32))
+ * git: introduce hack for handling git failure on ``--depth`` cloning (Issue [#33](https://bitbucket.org/conservancy/kallithea/issue/33))
+ * git: fix version detection with unexpected version string (Issue [#71](https://bitbucket.org/conservancy/kallithea/issue/71))
+ * git: preserve line endings when calling out to git
+ * hg: fix clone from svn+http urls using hg-svn (Issue [#72](https://bitbucket.org/conservancy/kallithea/issue/72))
+ * migrate: add missing import (Issue [#29](https://bitbucket.org/conservancy/kallithea/issue/29))
+ * pullrequests: handle pull requests to empty repos (Issue [#27](https://bitbucket.org/conservancy/kallithea/issue/27))
+ * pullrequests: when creating PRs, fix handling of new ajax requests while other ajax requests are pending
+ * pullrequests: fix updates for PRs between different repositories
+ * pullrequests: preserve query parameters in pull request overview paging links
+ * compare: workaround unexpected Mercurial behaviour when finding ancestor of null rev
+ * javascript: remove trailing comma to please IE8 (Issue [#39](https://bitbucket.org/conservancy/kallithea/issue/39))
+ * download: fix for zip file downloads not being valid zips (Issue [#35](https://bitbucket.org/conservancy/kallithea/issue/35))
+ * helpers: fix crash on new users without email (Issue [#28](https://bitbucket.org/conservancy/kallithea/issue/28))
+ * middleware: change middleware ordering so we don't buffer hgweb output in redirect
+ * bin: give ``kallithea_config.py`` ``#!/usr/bin/env python`` so it can be executed directly
+ * bin: reintroduce cleanup-repos paster command
+ * bin: fix ``update_repoinfo`` command
+ * urlify: don't include trailing punctuation in markup
+ * urlify: markup of hashes in ``()``
+ * styling: don't loop on trying to load kallithea-logo.png after kallithea-logo.svg failed
+ * error: don't crash on ``/error/document`` urls
+ * error: don't crash on response without status
+ * admin: prevent deletion of users that are owners of a repository/user group (Issue [#64](https://bitbucket.org/conservancy/kallithea/issue/64))
+ * admin: make settings hook name field smaller so it is less likely to overlap with the value field
+ * admin: when scanning for repos to add, ignore removed groups
+ * auth\_crowd: fix Admin Group Membership when using the Atlassian Crowd plugin
+ * auth: enable selecting PAM authentication module
+ * auth\_ldap: fix user automatically activated with LDAP authentication (Issue [#78](https://bitbucket.org/conservancy/kallithea/issue/78))
+ * db: fix beaker cache key for user groups — don't collide with users
+ * db: fix handling of (invalid) unicode email addresses
+ * db: don't use sql 'in' on empty sets in compare — avoid warning of bad performance
+ * db: to the extent it makes sense to have a one byte size limit, make it 255 instead of 256 to please MySQL (Issue [#96](https://bitbucket.org/conservancy/kallithea/issue/96))
+ * files: use current revision as default for 'show at' (Issue [#31](https://bitbucket.org/conservancy/kallithea/issue/31))
+ * files: fix HTML injection via file names
+ * files: use forward slash as path separator for consistency
+ * files: don't use HTML encoding where not needed (Issue [#74](https://bitbucket.org/conservancy/kallithea/issue/74)).
+ * feed: urlify and escape the commit description
+ * diff: fix diff of renamed files with whitespace in their names
+ * diff: don't split lines on bare CR as python splitlines do
+ * mergely: update Mergely to v3.3.9 (Issue [#83](https://bitbucket.org/conservancy/kallithea/issue/83))
+ * jquery: upgrade to 1.11.1
+ * codemirror: cleanup of integration and update to version 4.7
+ * setup: constrain dulwich to version 0.9.9, fixes [CVE-2015-0838](http://www.openwall.com/lists/oss-security/2015/03/22/19)
+ * gists: add missing formencode.htmlfill import
+ * ini: Make celeryd.log.level default values uppercase — lowercase might not be recognized and cause failure
+ * notification: handle unicode translations (Issue [#95](https://bitbucket.org/conservancy/kallithea/issue/95))
+ * repos: fix redirect after repo creation (and user/group add focus) (Issue [#98](https://bitbucket.org/conservancy/kallithea/issue/98))
+ * changeset: don't crash on malformed whitespace parameter — return 400 Bad Request
+ * stats: fix display when no data ready yet
+ * stats: fix "show more" link
+
+Features and improvements:
+
+ * ui: use font based icons — FontAwesome and Git Hub Octicons from fontello
+ * ui: HiDPI / Retina support in graphs and other places
+ * paster: add install-iis command to automate IIS handler generation and update documentation
+ * email templates: send text/plain part as well
+ * docs: lots of improvements of structure and content and language
+ * translations: updated using WebLate
+ * admin: show links to added repos after repo scan
+ * admin: show links to created users and groups
+ * admin: when scanning for repos without 'remove', report the repos that could/would be removed
+ * setup: support Mercurial 3.3
+ * db: drop most lazy joins — significant performance improvement
+ * db: add missing indices — significant performance improvement
+ * db: don't commit session if cache invalidation didn't change anything — improves performance
+ * comment: show full username in emails for PR/changeset comments
+ * changelog: added Settings to repo context menu
+ * utils: better display of ages >1 year when in short form
+ * remotes: add support to clone from Mercurial repositories over ssh
+ * hg: reimplement branch head listings more efficiently
+ * pullrequests: use same code and table ui for Repo Pull Requests and My Pull Requests
+ * pullrequests: add delete button to My Pull Requests overview
+ * pullrequests: on 'my pullrequests' show the user's own vote as second column next to 'latest vote'
+ * pullrequests: add option for adding repo owner as reviewer if none assigned
+ * pullrequests: make top pane one big form with meta data and one save button and preview changes in pane below — more like when creating the PR
+ * pullrequests: make 'update' functionality a separate submit button in the big form, automatically enabled when an update changeset is chosen
+ * pullrequests: show graph next to the list of changesets that are available for update
+ * pullrequests: for available changesets, also show changesets that not are descendants and thus not directly available but will be merged in
+ * pullrequests: show unrelated branch heads in the graph too — show the problem instead of trying to explain it
+ * pullrequests: show pending reviewer changes with "(not saved)"
+ * pullrequests: show comment count in top of summary box
+ * diff: improved parsing, be more strict and fail with good error messages
+ * diff: handle GIT delta binary patches
+ * diff: show renamed files as that
+ * diff: make trailing spaces more visible — make vertical line less transparent
+ * diff: show CR (\r) in diffs
+ * comment: warn before leaving page with open comments
+ * comment: clarify shown comment count (inline vs general)
+ * comment: extend next/previous links to global comments (Issue [#91](https://bitbucket.org/conservancy/kallithea/issue/91))
+
+Changes (might influence workflows):
+
+ * i18n: en translation has been removed — make sure to update your .ini files to have 'lang =' (nothing)
+ * ini: turn ``show_revision_number`` off by default
+ * pullrequests: don't give changeset 'unreviewed' status just because it is added to a PR
+ * pullrequests: tweak readable titles — just append ``/_/`` and branch name
+ * pullrequests: only author and admin can close
+ * pullrequests: don't add repo owner as reviewer in all PRs
+ * pullrequests: PRs between different repos should default to same destination/source branch
+ * pullrequests: use ``-- `` as separator in the automatic text when "updating" pull requests and is it to put latest updates first
+ * diff: don't group diffs based on the kind of change
+ * admin: set current user as owner when running repo scan
+ * changelog: change default view to 100 changesets, max to 2000
+ * date representation: use ISO8601 rather than a specific locale
+ * user groups: drop add/remove all buttons for member selection — they are too dangerous and multi-select can do the same
+ * hg: drop support for hg web.hidden
+ * template: link the last revision in the file browser to the changeset
+
+Cleanup:
+
+ * code: Fix typos and language in comments and code
+ * ui: Correct capitalization and improved English text in the UI
+ * javascript: use strict mode
+ * tags: rename old non-Kallithea tags and prefix them with 0.0 to show that Kallithea is superior
+ * javascript: more jQuery, less YUI, less clutter
+ * templates: better structure, less cut'n'paste coding
+ * html: various improvements
+ * css: various improvements
+ * exceptions: avoid silently catching exceptions — especially avoid catch all
+ * tests: stability fixes
+ * tests: remove large unused test fixture
+ * whitespacecleanup.sh: run it regularly to ensure consistent whitespace and avoid spurious changes
+ * controllers: consistently use ``formfill.render`` with ``force_defaults=False``
+ * gists: use ``allow_extra_fields`` and ``filter_extra_fields`` in gist forms like in most other forms
+ * json: always use ``kallithea.lib.compat`` for json — and nothing else
+ * json: drop simplejson fallback and just use stdlib
+ * db: check for None instead of boolean false if that is what we mean
+

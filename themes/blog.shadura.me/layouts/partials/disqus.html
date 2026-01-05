@@ -1,0 +1,38 @@
+{{ if and .Site.Params.disqus_sitename (ne .Params.comments false) }}
+<hr>
+
+<div class="panel-group" id="show-comments" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="comments-heading">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-parent="#show-comments" href="#comments" aria-expanded="false" aria-controls="comments">
+          Comments (click to open)
+        </a>
+      </h4>
+    </div>
+    <div id="comments" class="panel-collapse collapse" role="tabpanel" aria-labelledby="comments-heading">
+      <div class="panel-body" id="disqus_thread" aria-live="polite">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+      var disqus_shortname = '{{ .Site.Params.disqus_sitename }}';
+      var disqus_identifier = '{{ .Permalink }}';
+      var disqus_url = '{{ .Permalink }}';
+      var disqus_script = 'embed.js';
+      var load_disqus = function () {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = 'https://' + disqus_shortname + '.disqus.com/' + disqus_script;
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      };
+
+      $('#show-comments h4, #show-comments a').on('click', function () {
+          $('#comments').collapse('show');
+          (load_disqus());
+          return false;
+      });
+</script>
+{{ end }}
